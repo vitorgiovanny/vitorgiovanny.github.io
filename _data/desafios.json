@@ -1,0 +1,34 @@
+[
+    {
+        "id":  1,
+        "slug":  "api-de-gerenciamento-de-tarefas",
+        "title":  "API de Gerenciamento de Tarefas",
+        "descriptionTitle":  "Desenvolva uma API RESTful usando .NET Core para um sistema de gerenciamento de tarefas (To-Do List).",
+        "status":  "Facil",
+        "tags":  [
+                     "javascript",
+                     "css",
+                     "c#"
+                 ],
+        "aprendizado":  [
+                            "Estruturação de endpoints REST com boas práticas de versionamento.",
+                            "Modelagem de entidades e persistência com Entity Framework Core.",
+                            "Uso de autenticação JWT para proteger operações sensíveis."
+                        ]
+    },
+    {
+        "id":  2,
+        "slug":  "two-sum",
+        "title":  "Two Sum",
+        "descriptionTitle":  "Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.",
+        "status":  "Facil",
+        "tags":  [
+                     "c#"
+                 ],
+        "aprendizado":  [
+                            "Aplicação de tabela hash para reduzir complexidade para O(n).",
+                            "Validação de casos de borda para listas com números negativos e duplicados.",
+                            "Leitura cuidadosa de enunciado para não reutilizar o mesmo índice."
+                        ]
+    }
+]

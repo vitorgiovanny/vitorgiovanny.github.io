@@ -1,29 +1,55 @@
-<html>
-<head>
-    <title>Vitor Giovanny</title>
-    <link rel="stylesheet" href="src/css/style.css" />
-    <script type="module" src="src/js/main.js"></script>
-</head>
-<body>
-<div class="container wrapper">
-    <header>
-        <div class="avatar"><img src="https://avatars.githubusercontent.com/u/25711645?v=4&size=200" /></div>
-        <h1 class="title-page"><a href="https://vitorgiovanny.github.io/">Vitor Giovanny</a></h1>
-        <div class="description">
-            <p>
-                Meus desafios tecnicos.<br>
-                <i>Landing page focado no aprendizado dos desafios encontrados na internet.</i>
-            </p>
-            <nav class="nav social">
-                <ul class="flat">
-                        <li><a href="https://github.com/vitorgiovanny" title="Github" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a></li>
-                        <li><a href="https://www.linkedin.com/in/vitor-giovanny/" title="LinkedIn" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a></li>
-                    </ul>
-            </nav>
+---
+layout: default
+title: Início
+---
+
+<section>
+    <article class="collection-hero">
+        <div class="collection-hero-content">
+            <p class="section-kicker">Base do site</p>
+            <h2 class="section-title"><span class="section-icon">#</span> Conteúdo por arquivo Markdown</h2>
+            <p class="section-subtitle">Cada menu abaixo lê automaticamente os arquivos <code>.md</code> da sua coleção. Para publicar um item novo, basta criar um arquivo na pasta correta com front matter Jekyll.</p>
         </div>
-        
-    </header>
-    <div class="posts" id="post-data-json"></div>
-</div>
-</body>
-</html>
+    </article>
+
+    <div class="shortcut-grid">
+        <a class="shortcut-card" href="{{ '/desafios/' | relative_url }}">
+            <span class="shortcut-icon">&lt;/&gt;</span>
+            <strong>Desafios</strong>
+            <span>{{ site.desafios.size }} arquivo(s)</span>
+        </a>
+        <a class="shortcut-card" href="{{ '/computacao-quantica/' | relative_url }}">
+            <span class="shortcut-icon">Q</span>
+            <strong>Computação Quântica</strong>
+            <span>{{ site.computacao_quantica.size }} arquivo(s)</span>
+        </a>
+        <a class="shortcut-card" href="{{ '/arquiteturas/' | relative_url }}">
+            <span class="shortcut-icon">A</span>
+            <strong>Arquiteturas</strong>
+            <span>{{ site.arquiteturas.size }} arquivo(s)</span>
+        </a>
+        <a class="shortcut-card" href="{{ '/design-patterns/' | relative_url }}">
+            <span class="shortcut-icon">DP</span>
+            <strong>Design Patterns</strong>
+            <span>{{ site.design_patterns.size }} arquivo(s)</span>
+        </a>
+    </div>
+
+    <div class="post">
+        <div class="headerPost">
+            <div class="myChallenge">
+                <h3 class="titleLink">Como adicionar conteúdo</h3>
+                <p class="descriptionTitle">Crie um arquivo Markdown na pasta da coleção desejada. O card aparece automaticamente na página da seção após o build do Jekyll.</p>
+                <div class="learning-list">
+                    <b>Pastas:</b>
+                    <ul>
+                        <li>_desafios</li>
+                        <li>_computacao_quantica</li>
+                        <li>_arquiteturas</li>
+                        <li>_design_patterns</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

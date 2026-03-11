@@ -2,12 +2,7 @@
 <head>
     <title>Vitor Giovanny</title>
     <link rel="stylesheet" href="../css/style.css" />
-    <script type="module">
-            import AddPage from '../js/main.js';
-        var search = new URLSearchParams(location.search);
-        console.log('ola mundo')
-        AddPage(search.get('id'));
-    </script>
+    <script type="module" src="../js/main.js"></script>
 </head>
 <body>
 <div class="container wrapper">
@@ -26,6 +21,11 @@
                     </ul>
             </nav>
         </div>
+        <nav class="main-nav">
+            <a href="../../index.html">Home</a>
+            <a href="./Desafios.html">Desafios</a>
+            <a href="./Aprendizado.html">Aprendizado</a>
+        </nav>
         
     </header>
     <div class="posts" id="post-id-json">

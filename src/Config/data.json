@@ -1,5 +1,20 @@
 [
-
+    {
+        "Id":1,
+        "title": "API de Gerenciamento de Tarefas",
+        "descriptionTitle":"Desenvolva uma API RESTful usando .NET Core para um sistema de gerenciamento de tarefas (To-Do List).",
+        "description": "Desenvolva uma API RESTful usando .NET Core para um sistema de gerenciamento de tarefas (To-Do List).",
+        "requisitos":"<ul> <li>CRUD completo de tarefas: criar, ler, atualizar, deletar.</li> <li>Cada tarefa deve ter: <ul> <li>Título</li> <li>Descrição</li> <li>Data de vencimento</li> <li>Status (pendente, em progresso, concluído)</li> <li>Prioridade</li> </ul> </li> <li>Utilize Entity Framework Core para persistência no banco de dados.</li> <li>Implemente autenticação e autorização usando JWT.</li> <li>Adicione um endpoint para exportar as tarefas como um arquivo CSV.</li> <li>Escreva testes unitários para os serviços principais.</li> </ul>",
+        "tags": ["javascript", "css", "c#"],
+        "tagsDesafios":"",
+        "status":"Facil",
+        "aprendizado": [
+            "Estruturação de endpoints REST com boas práticas de versionamento.",
+            "Modelagem de entidades e persistência com Entity Framework Core.",
+            "Uso de autenticação JWT para proteger operações sensíveis."
+        ],
+        "href": ""
+    },
     {
         "Id":2,
         "title": "Two Sum",
@@ -9,6 +24,11 @@
         "status":"Facil",
         "requisitos":"<ul> <li>CRUD completo de tarefas: criar, ler, atualizar, deletar.</li> <li>Cada tarefa deve ter: <ul> <li>Título</li> <li>Descrição</li> <li>Data de vencimento</li> <li>Status (pendente, em progresso, concluído)</li> <li>Prioridade</li> </ul> </li> <li>Utilize Entity Framework Core para persistência no banco de dados.</li> <li>Implemente autenticação e autorização usando JWT.</li> <li>Adicione um endpoint para exportar as tarefas como um arquivo CSV.</li> <li>Escreva testes unitários para os serviços principais.</li> </ul>",
         "tagsDesafios":"<span id='letCode'><img width='24' height='24' src='https://img.icons8.com/external-tal-revivo-color-tal-revivo/24/external-level-up-your-coding-skills-and-quickly-land-a-job-logo-color-tal-revivo.png' alt='external-level-up-your-coding-skills-and-quickly-land-a-job-logo-color-tal-revivo'/>LeetCode</span>",
+        "aprendizado": [
+            "Aplicação de tabela hash para reduzir complexidade para O(n).",
+            "Validação de casos de borda para listas com números negativos e duplicados.",
+            "Leitura cuidadosa de enunciado para não reutilizar o mesmo índice."
+        ],
         "href": "https://github.com/vitorgiovanny/Two-Sum-LeetCode"
     }
 ]

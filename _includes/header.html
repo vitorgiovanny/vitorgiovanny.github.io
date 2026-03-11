@@ -1,0 +1,27 @@
+<header class="site-header">
+  <div class="profile-row">
+    <div class="avatar"><img src="https://avatars.githubusercontent.com/u/25711645?v=4&size=200" alt="Avatar de Vitor Giovanny" /></div>
+
+    <div class="profile-content">
+      <h1 class="title-page"><a href="{{ '/' | relative_url }}">Vitor Giovanny</a></h1>
+
+      <p class="description-text">
+        Organizando estudos em Markdown sobre <span class="highlight-net">desafios</span>, <span class="highlight-quantum">computação quântica</span>, arquiteturas e design patterns.
+      </p>
+
+      <nav class="nav social" aria-label="Redes sociais">
+        <ul class="flat">
+          <li><a href="https://github.com/vitorgiovanny" title="Github" target="_blank" rel="noopener">🐙 Github</a></li>
+          <li><a href="https://www.linkedin.com/in/vitor-giovanny/" title="LinkedIn" target="_blank" rel="noopener">💼 LinkedIn</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <nav class="main-nav" aria-label="Navegação principal">
+    <a href="{{ '/desafios/' | relative_url }}" class="{% if page.nav_key == 'desafios' %}active{% endif %}">Desafios</a>
+    <a href="{{ '/computacao-quantica/' | relative_url }}" class="{% if page.nav_key == 'computacao-quantica' %}active{% endif %}">Computação Quântica</a>
+    <a href="{{ '/arquiteturas/' | relative_url }}" class="{% if page.nav_key == 'arquiteturas' %}active{% endif %}">Arquiteturas</a>
+    <a href="{{ '/design-patterns/' | relative_url }}" class="{% if page.nav_key == 'design-patterns' %}active{% endif %}">Design Patterns</a>
+  </nav>
+</header>

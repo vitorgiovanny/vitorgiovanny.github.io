@@ -1,0 +1,56 @@
+---
+layout: default
+---
+
+{% assign challenge_title = page.title | default: page.data.title %}
+{% assign challenge_description = page.description_title | default: page.data.description_title %}
+{% assign challenge_tags = page.tags | default: page.data.tags %}
+{% assign challenge_status = page.status | default: page.data.status %}
+{% assign challenge_requirements = page.requisitos_html | default: page.data.requisitos_html %}
+{% assign challenge_learning = page.aprendizado | default: page.data.aprendizado %}
+{% assign challenge_code_url = page.code_url | default: page.data.code_url %}
+
+<div class="post post-detail">
+  <div class="headerPost">
+    <div class="myChallenge">
+      <h1 class="titleLink">{{ challenge_title }}</h1>
+      {% if challenge_description %}
+        <p class="descriptionTitle">{{ challenge_description }}</p>
+      {% endif %}
+
+      {% if challenge_tags and challenge_tags.size > 0 %}
+        <p class="post-meta"><b>Tags:</b> <span>{{ challenge_tags | join: ', ' }}</span></p>
+      {% endif %}
+      {% if challenge_status %}
+        <div class="post-meta"><b>Status:</b> <span class="status-badge">{{ challenge_status }}</span></div>
+      {% endif %}
+
+      <div class="learning-list">
+        <b>Descrição:</b>
+        <div>{{ content }}</div>
+      </div>
+
+      {% if challenge_requirements %}
+        <div class="learning-list">
+          <b>Requisitos:</b>
+          <div>{{ challenge_requirements }}</div>
+        </div>
+      {% endif %}
+
+      {% if challenge_learning and challenge_learning.size > 0 %}
+        <div class="learning-list">
+          <b>Aprendizado:</b>
+          <ul>
+            {% for item in challenge_learning %}
+              <li>{{ item }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% endif %}
+
+      {% if challenge_code_url %}
+        <p><a class="code-link" href="{{ challenge_code_url }}" target="_blank" rel="noopener">Ver código</a></p>
+      {% endif %}
+    </div>
+  </div>
+</div>

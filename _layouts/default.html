@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  {% assign page_title = page.title | default: page.data.title %}
+  <title>{% if page_title %}{{ page_title }} | {% endif %}{{ site.title }}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  {% assign css_path = '/src/css/style.css' | relative_url %}
+  <link rel="stylesheet" href="{{ css_path }}?v={{ site.time | date: '%s' }}" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
+  <div class="top-gradient" aria-hidden="true"></div>
+  <div class="container wrapper">
+    {% include header.html %}
+    <main id="main-content">
+      {{ content }}
+    </main>
+
+    <footer class="site-footer">
+      <p>© {{ 'now' | date: '%Y' }} — Base em Jekyll para coleções de estudo em Markdown.</p>
+    </footer>
+  </div>
+</body>
+</html>

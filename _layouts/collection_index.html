@@ -1,0 +1,54 @@
+---
+layout: default
+---
+
+{% assign collection_docs = site[page.collection_key] %}
+
+<section>
+  <article class="collection-hero">
+    <div class="collection-hero-content">
+      {% if page.section_kicker %}
+        <p class="section-kicker">{{ page.section_kicker }}</p>
+      {% endif %}
+      <h2 class="section-title"><span class="section-icon">{{ page.section_icon }}</span>{{ page.section_title }}</h2>
+      <p class="section-subtitle">{{ page.section_subtitle }}</p>
+    </div>
+  </article>
+
+  {% if collection_docs and collection_docs.size > 0 %}
+    {% assign sorted_docs = collection_docs | sort: 'title' %}
+    <div class="posts">
+      {% for item in sorted_docs %}
+        {% assign item_title = item.title | default: item.data.title %}
+        {% assign item_description = item.description_title | default: item.data.description_title | default: item.excerpt | strip_html | truncate: 160 %}
+        {% assign item_status = item.status | default: item.data.status %}
+        {% assign item_tags = item.tags | default: item.data.tags %}
+        <div class="post">
+          <div class="headerPost">
+            <div class="myChallenge">
+              <div class="post-head">
+                <h3 class="titleLink"><a href="{{ item.url | relative_url }}">{{ item_title }}</a></h3>
+                {% if item_status %}
+                  <span class="status-badge">{{ item_status }}</span>
+                {% endif %}
+              </div>
+              <p class="descriptionTitle">{{ item_description }}</p>
+              {% if item_tags and item_tags.size > 0 %}
+                <div class="tag-list">
+                  {% for tag in item_tags %}
+                    <span class="tag-chip">#{{ tag }}</span>
+                  {% endfor %}
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  {% else %}
+    <div class="empty-state">
+      <p>{{ page.empty_message }}</p>
+      <p>Adicione um arquivo <code>.md</code> na pasta da coleção e rode o build do Jekyll.</p>
+    </div>
+  {% endif %}
+</section>

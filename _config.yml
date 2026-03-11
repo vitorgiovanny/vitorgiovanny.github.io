@@ -1,0 +1,44 @@
+title: Vitor Giovanny
+description: Meus desafios técnicos e aprendizados
+markdown: kramdown
+permalink: pretty
+
+collections:
+  desafios:
+    output: true
+    permalink: /desafios/:name/
+  computacao_quantica:
+    output: true
+    permalink: /computacao-quantica/:name/
+  arquiteturas:
+    output: true
+    permalink: /arquiteturas/:name/
+  design_patterns:
+    output: true
+    permalink: /design-patterns/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: "desafios"
+    values:
+      layout: challenge
+      nav_key: desafios
+  - scope:
+      path: ""
+      type: "computacao_quantica"
+    values:
+      layout: challenge
+      nav_key: computacao-quantica
+  - scope:
+      path: ""
+      type: "arquiteturas"
+    values:
+      layout: challenge
+      nav_key: arquiteturas
+  - scope:
+      path: ""
+      type: "design_patterns"
+    values:
+      layout: challenge
+      nav_key: design-patterns

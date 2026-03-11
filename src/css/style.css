@@ -1,117 +1,534 @@
-*{
-    margin:0;
+* {
+    margin: 0;
+    box-sizing: border-box;
     font-family: "Inter", sans-serif;
 }
 
-header{
-    margin-bottom: 20px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #dddddd;
+body {
+    color: #18181b;
+    background-color: #f1f5f9;
+    line-height: 1.6;
 }
 
-a{
+a {
+    color: #1f2937;
     text-decoration: none;
-    color: black;
+    transition: color 0.2s ease;
 }
 
-.avatar{
-    float: left;
-    margin: 0 20px 0 0;        
+a:hover {
+    color: #2563eb;
 }
 
-.avatar img {
-    width: 64px;
-    height: 64px;
-    overflow: hidden;
-    border-radius: 100%;
+a:focus-visible,
+.main-nav a:focus-visible,
+.code-link:focus-visible,
+.quantum-cta:focus-visible {
+    outline: 2px solid #2563eb;
+    outline-offset: 2px;
+    border-radius: 8px;
 }
 
-.container{
-    max-width: 800px;
-    margin-top: 30px !important;
+.top-gradient {
+    height: 8px;
+    background: linear-gradient(90deg, #2563eb 0%, #4f46e5 50%, #7c3aed 100%);
 }
 
-
-.description{
-    display: flex;
-    justify-content: space-between;
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 16px;
+    background: #2563eb;
+    color: #ffffff;
+    padding: 8px 12px;
+    border-radius: 8px;
+    z-index: 1000;
 }
 
-.wrapper{
+.skip-link:focus {
+    top: 12px;
+}
+
+.container {
+    max-width: 920px;
+    margin-top: 42px !important;
+    padding: 0 22px 30px;
+}
+
+.wrapper {
     margin: 0 auto;
 }
 
-.description ul{
+.site-header {
+    margin-bottom: 44px;
+}
+
+.profile-row {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+}
+
+.avatar img {
+    width: 132px;
+    height: 132px;
+    border-radius: 999px;
+    border: 4px solid #ffffff;
+    box-shadow: 0 12px 30px rgba(30, 41, 59, 0.2);
+}
+
+.profile-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.title-page {
+    font-size: 2.8rem;
+    line-height: 1.2;
+    margin-bottom: 8px;
+}
+
+.description-text {
+    color: #475569;
+    font-size: 1.35rem;
+    max-width: 720px;
+    margin-bottom: 18px;
+    line-height: 1.65;
+}
+
+.highlight-net {
+    color: #2563eb;
+    font-weight: 700;
+}
+
+.highlight-quantum {
+    color: #4f46e5;
+    font-weight: 700;
+}
+
+.nav.social ul {
     list-style-type: none;
     display: flex;
-}
-
-.description nav{
-    margin: 0;
-    padding: 0;
-    border: none;
-    min-width: 50px;
-    margin-left: 15px;
-}
-
-.description nav ul svg {
-    max-height: 15px;
-}
-
-.description .scheme-toggle {
-    height: 100%;
-}
-
-.description .scheme-toggle a svg {
-    max-height: 15px;
-}
-
-.description .scheme-toggle a.dark svg {
-    fill: #f8e04f;
-    color: #f8e04f;
-}
-
-.description .scheme-toggle a.light svg {
-    fill: grey;
-    color: black;
+    gap: 14px;
+    padding-left: 0;
 }
 
 nav.social a {
-    color: #333;
-}
-.nav.social a:hover {
-    color: #3700ff;
-}
-
-.post{
-    margin-bottom: 10px;
-    border-bottom: 1px solid #cccccc85;
-    padding-bottom: 10px;
+    color: #64748b;
+    font-size: 1.05rem;
+    font-weight: 600;
 }
 
-.tiitleLink{
-
+.main-nav {
+    margin-top: 22px;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    background: #e2e8f0;
+    padding: 6px;
+    border-radius: 12px;
+    width: fit-content;
 }
 
-.tiitleLink a{
-    text-decoration: none;
-    color: black;
-}
-
-.descriptionTitle{
-    color:#5e5e5e;
-}
-
-.leetcode>a{
-    background-color: #E7A41F;
-    padding: 5px;
+.main-nav a {
+    border: 1px solid transparent;
+    padding: 9px 28px;
     border-radius: 10px;
+    color: #475569;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: all 0.2s ease;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    border-color: #dbe2ea;
+    color: #2563eb;
+    background-color: #ffffff;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.07);
+}
+
+.section-title {
+    margin-bottom: 10px;
+    font-size: 2.2rem;
+    line-height: 1.25;
+    color: #1e293b;
+}
+
+.section-icon {
+    color: #2563eb;
+    margin-right: 10px;
+}
+
+.section-subtitle {
+    color: #64748b;
+    margin-bottom: 26px;
+    font-size: 1.08rem;
+}
+
+.section-kicker {
+    color: #2563eb;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.78rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.collection-hero {
+    border-radius: 24px;
+    background: linear-gradient(135deg, #0f172a 0%, #1d4ed8 55%, #38bdf8 100%);
+    color: #e0f2fe;
+    padding: 32px;
+    margin-bottom: 24px;
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.16);
+}
+
+.collection-hero .section-title,
+.collection-hero .section-subtitle {
+    color: inherit;
+}
+
+.collection-hero .section-icon {
+    color: #bfdbfe;
+}
+
+.collection-hero .section-subtitle {
+    margin-bottom: 0;
+    max-width: 720px;
+}
+
+.shortcut-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 14px;
+    margin-bottom: 24px;
+}
+
+.shortcut-card {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background: #ffffff;
+    border: 1px solid #dbe4ee;
+    border-radius: 18px;
+    padding: 20px;
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+}
+
+.shortcut-card:hover {
+    border-color: #93c5fd;
+    box-shadow: 0 16px 32px rgba(37, 99, 235, 0.12);
+}
+
+.shortcut-card strong {
+    font-size: 1.05rem;
+    color: #0f172a;
+}
+
+.shortcut-card span:last-child {
+    color: #64748b;
+    font-size: 0.95rem;
+}
+
+.shortcut-icon {
+    width: 48px;
+    height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    background: #dbeafe;
+    color: #1d4ed8;
+    font-weight: 800;
+}
+
+.empty-state {
+    background: #ffffff;
+    border: 1px dashed #94a3b8;
+    border-radius: 18px;
+    padding: 28px;
+    color: #475569;
+}
+
+.empty-state p + p {
+    margin-top: 8px;
+}
+
+.posts {
+    display: grid;
+    gap: 16px;
+}
+
+.post {
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    background: #ffffff;
+    transition: all 0.25s ease;
+}
+
+.post:hover {
+    box-shadow: 0 10px 30px rgba(37, 99, 235, 0.12);
+    border-color: #bfdbfe;
 }
 
 .myChallenge {
-    padding: 15px;
+    padding: 22px 28px;
 }
 
-.myChallenge>p {
-    padding-top: 15px;
+.post-head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.titleLink {
+    font-size: 1.9rem;
+    margin-bottom: 0;
+    line-height: 1.3;
+}
+
+.titleLink a:hover {
+    color: #2563eb;
+}
+
+.descriptionTitle {
+    color: #475569;
+    margin-bottom: 14px;
+    font-size: 1.02rem;
+}
+
+.post-meta {
+    color: #334155;
+    margin-bottom: 6px;
+}
+
+.status-badge {
+    background: #d1fae5;
+    color: #047857;
+    padding: 5px 14px;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    display: inline-block;
+}
+
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.tag-chip {
+    font-size: 0.78rem;
+    color: #64748b;
+    background: #f1f5f9;
+    padding: 5px 10px;
+    border-radius: 9px;
+    font-weight: 600;
+}
+
+.quantum-hero {
+    border-radius: 26px;
+    background: linear-gradient(135deg, #312e81 0%, #4f46e5 55%, #7c3aed 100%);
+    color: #e0e7ff;
+    padding: 34px;
+    margin-bottom: 22px;
+    position: relative;
+    overflow: hidden;
+}
+
+.quantum-hero::after {
+    content: "";
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    border-radius: 999px;
+    right: -70px;
+    top: -80px;
+    background: rgba(255, 255, 255, 0.15);
+    filter: blur(8px);
+}
+
+.quantum-hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.quantum-hero h3 {
+    font-size: 1.85rem;
+    margin-bottom: 8px;
+    color: #eef2ff;
+}
+
+.quantum-hero p {
+    max-width: 620px;
+    margin-bottom: 18px;
+    color: #c7d2fe;
+}
+
+.quantum-cta {
+    display: inline-block;
+    background: #ffffff;
+    color: #312e81;
+    font-weight: 700;
+    padding: 10px 18px;
+    border-radius: 999px;
+}
+
+.quantum-topics {
+    display: grid;
+    gap: 12px;
+}
+
+.quantum-topic {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 14px;
+    transition: all 0.2s ease;
+}
+
+.quantum-topic:hover {
+    border-color: #c7d2fe;
+    box-shadow: 0 8px 20px rgba(79, 70, 229, 0.12);
+}
+
+.quantum-topic-icon {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: #e0e7ff;
+    font-size: 1.1rem;
+}
+
+.quantum-topic-title {
+    font-size: 1.1rem;
+    margin-bottom: 2px;
+}
+
+.quantum-topic-desc {
+    color: #64748b;
+    margin-bottom: 4px;
+}
+
+.quantum-topic-meta {
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.72rem;
+    font-weight: 700;
+}
+
+.learning-list {
+    margin-top: 14px;
+}
+
+.learning-list ul {
+    padding-left: 20px;
+    margin-top: 8px;
+}
+
+.learning-list li + li {
+    margin-top: 4px;
+}
+
+.post-detail .learning-list > div > p + p {
+    margin-top: 10px;
+}
+
+.post-detail .learning-list code {
+    background: #f4f4f5;
+    padding: 2px 6px;
+    border-radius: 6px;
+}
+
+.code-link {
+    display: inline-block;
+    margin-top: 14px;
+    background-color: #2563eb;
+    color: #ffffff;
+    padding: 7px 14px;
+    border-radius: 10px;
+}
+
+.code-link:hover {
+    color: #ffffff;
+    background-color: #1d4ed8;
+}
+
+.site-footer {
+    margin-top: 56px;
+    padding-top: 20px;
+    border-top: 1px solid #dbe4ee;
+    text-align: center;
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 640px) {
+    .container {
+        margin-top: 20px !important;
+        padding: 0 14px 20px;
+    }
+
+    .profile-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .avatar img {
+        width: 92px;
+        height: 92px;
+    }
+
+    .title-page {
+        font-size: 2rem;
+    }
+
+    .description-text {
+        font-size: 1.06rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .titleLink {
+        font-size: 1.45rem;
+    }
+
+    .collection-hero {
+        padding: 24px;
+    }
+
+    .main-nav a {
+        font-size: 0.95rem;
+        padding: 8px 16px;
+    }
+
+    .post-head {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .quantum-hero {
+        padding: 24px;
+    }
+
+    .quantum-hero h3 {
+        font-size: 1.4rem;
+    }
 }
